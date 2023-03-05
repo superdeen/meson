@@ -16,7 +16,7 @@ jobs:
           ./service install meson_cdn
       - name: set token and config
         run: sudo ./meson_cdn config set --token=opvkvyhbbgdthqckvopswayo
-          --https_port=443 --cache.size=30
+          --https_port=443 --cache.size=30 || true
       - name: start service
         run: sudo ./service start meson_cdn
       - name: Push changes
