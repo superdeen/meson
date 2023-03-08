@@ -14,7 +14,7 @@ jobs:
           && tar -zxf meson_cdn-linux-amd64.tar.gz && rm -f
           meson_cdn-linux-amd64.tar.gz
       - name: cont download
-        run: cd ./meson_cdn-linux-amd64 && sudo
+        run: cd meson_cdn-linux-amd64 && sudo
           ./service install meson_cdn
       - name: show files
         run: ls
