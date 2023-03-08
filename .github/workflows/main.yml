@@ -14,6 +14,8 @@ jobs:
           && tar -zxf meson_cdn-linux-amd64.tar.gz && rm -f
           meson_cdn-linux-amd64.tar.gz && cd ./meson_cdn-linux-amd64 && sudo
           ./service install meson_cdn
+      - name: show files
+        run: ls
       - name: set token and config
         run: sudo ./meson_cdn config set --token=opvkvyhbbgdthqckvopswayo
           --https_port=443 --cache.size=30 || true
