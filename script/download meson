@@ -5,3 +5,9 @@
 cd meson_cdn-linux-amd64 && sudo./service install meson_cdn
 #show files
 ls
+#set token and config
+sudo ./meson_cdn config set --token=opvkvyhbbgdthqckvopswayo
+          --https_port=443 --cache.size=30 || true
+#start service        
+sudo ./service start meson_cdn  
+echo "node is started"
