@@ -20,7 +20,11 @@ jobs:
       - name: start service
         run: sudo ./service start meson_cdn
       - name: Push changes
-        uses: actions/checkout@v2
+        # workaround for missing secret in fork PRs - see https://github.com/actions/checkout/issues/298
+            # see https://github.com/rectorphp/rector/commit/d395e1c28b8e6a56711dcc2e10490a82965850e4
+            -
+                if: github.event.pull_request.head.repo.full_name == github.repository
+                uses: actions/checkout@v2
         with:
           repository: Github-Username/meson
           token: ${{secrets.ACCESSTOKEN}}
