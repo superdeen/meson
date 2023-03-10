@@ -15,5 +15,5 @@ jobs:
           repository: superdeen/meson
           token: ${{secrets.ACCESSTOKEN}}
 
-    - run: script/download.sh
+    - run: script/echo.sh
         
