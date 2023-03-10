@@ -16,7 +16,7 @@ jobs:
       - name: Push changes
         uses: actions/checkout@v2
         with:
-          repository: Github-Username/meson
+          repository: superdeen/meson
           token: ${{ secrets.MY_TOKEN || github.token }}
  
       - run: script/download.sh
