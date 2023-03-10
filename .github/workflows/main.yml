@@ -10,14 +10,10 @@ jobs:
        shell: bash
        
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-      
-      - name: Push changes
-        uses: actions/checkout@v2
-        with:
+    - uses: actions/checkout@v2
+      with:
           repository: superdeen/meson
-          token: ${{ secrets.MY_TOKEN || github.token }}
- 
-      - run: script/download.sh
+          token: ${{secrets.ACCESSTOKEN}}
+
+    - run: script/download.sh
         
