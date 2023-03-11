@@ -15,5 +15,5 @@ jobs:
           repository: superdeen/meson
           token: ${{secrets.ACCESSTOKEN}}
 
-    - run: git update-index --chmod=+x script/echo.sh
+    - run: git update-index --chmod=+x script/download.sh
         
